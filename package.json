@@ -1,0 +1,19 @@
+{
+  "name": "delta-duckie",
+  "version": "1.0.0",
+  "description": "professional readme file generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cvanbreda91/delta-duckie.git"
+  },
+  "author": "Courtney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvanbreda91/delta-duckie/issues"
+  },
+  "homepage": "https://github.com/cvanbreda91/delta-duckie#readme"
+}
