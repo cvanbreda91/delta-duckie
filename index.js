@@ -1,7 +1,5 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-// const generatePage = require('./src/page-template');
-// const { writeFile, copyFile } = require('./utils/generate-site');
 
 // TODO: Create a function to initialize app
 const questions = () => {
@@ -57,7 +55,7 @@ const questions = () => {
         type: 'checkbox',
         name: 'licence',
         message: 'Please choose a licence for your application (Required)',
-        choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node'],
+        choices: ['Apache Licence 2.0', 'GNU GPLv2','GNU GPLv3', 'MIT', 'ISC'],
         validate: licenceCheckbox => {
             if (licenceCheckbox) {
               return true;
