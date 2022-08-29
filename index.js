@@ -108,20 +108,29 @@ const questions = (data) => {
 
     //template
     const template = `# ${title}
-    ${licenseBadge}
     *[Description]${description}
     *[Installation]${installation}
     *[Useage]${useage}
     *[Contribution]${contribution}
     *[license] (${license})
     `;
-    writeFile.renderLicenseBadge(license);
-    writeFile.generateMarkdown(title,template)
-    
+    writeFile.generateMarkdown(title,template);
+    renderLicenseBadge(title, license);
     
 })}
 
 questions()
+
+function renderLicenseBadge(fileName, license) {
+  if (license == "Apache Licence 2.0") {
+    fs.appendFile(`./${fileName.toUpperCase().split(' ').join('')}.md`, '![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/Apache.png?raw=true)', err => {
+      if (err) throw err;
+    })
+  }
+  else {
+    console.log ('not cool')
+  }
+}
 
 
 

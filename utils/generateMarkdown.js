@@ -3,16 +3,7 @@ const fs = require('fs');
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 // function renderLicenseBadge(license) {
-  function renderLicenseBadge(license) {
-    let licenseBadge = ('![License]()');
-    if (license == "Apache Licence 2.0") {
-      licenseBadge = 
-      console.log (licenseBadge)
-    }
-    else {
-      console.log ('not cool')
-    }
-  }
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -30,4 +21,4 @@ fs.writeFile(`./${fileName.toUpperCase().split(' ').join('')}.md`, data, functio
 })
 
 
-module.exports = {generateMarkdown,renderLicenseBadge,renderLicenseLink,renderLicenseSection};
+module.exports = {generateMarkdown,renderLicenseLink,renderLicenseSection};
