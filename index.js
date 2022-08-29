@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const writeFile = require ('./utils/generateMarkdown')
+const writeFile = require ('./utils/generateMarkdown');
 
 // TODO: Create a function to initialize app
 const questions = (data) => {
@@ -55,7 +55,7 @@ const questions = (data) => {
       },
       {
         type: 'checkbox',
-        name: 'licence',
+        name: 'license',
         message: 'Please choose a licence for your application (Required)',
         choices: ['Apache Licence 2.0', 'GNU GPLv2','GNU GPLv3', 'MIT', 'ISC'],
         validate: licenceCheckbox => {
@@ -102,25 +102,27 @@ const questions = (data) => {
       test,
       license,
       username,
-      email
+      email,
+      
     })=>{
+
     //template
     const template = `# ${title}
+    ${licenseBadge}
     *[Description]${description}
     *[Installation]${installation}
     *[Useage]${useage}
     *[Contribution]${contribution}
+    *[license] (${license})
     `;
-    writeFile(title,template)
+    writeFile.renderLicenseBadge(license);
+    writeFile.generateMarkdown(title,template)
     
-    })
-}
-const writeFile = (fileName,data) =>
-fs.writeFile(`./${fileName.toUpperCase().split(' ').join('')}.md`, data, function (err) {
-  if (err) throw err;
-  console.log('Saved!');
-})
+    
+})}
 
 questions()
+
+
 
 
