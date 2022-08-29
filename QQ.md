@@ -4,4 +4,4 @@
     *[Useage]undefined
     *[Contribution]qq
     *[license] (Apache Licence 2.0)
-    ![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/Apache.png?raw=true)
+    ![img](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/Apache.png?raw=true)
