@@ -1,4 +1,4 @@
-    ![website-image](https://img.shields.io/github/license/cmvanbreda91/delta-duckie)
+    ![license](https://img.shields.io/npm/l/inquirer)
     *[Description]ff
     *[Installation]ff
     *[Useage]undefined
