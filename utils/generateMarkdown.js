@@ -1,5 +1,6 @@
 
 const fs = require('fs');
+// const {answers} = require('/');
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
@@ -13,14 +14,16 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-}
+const generateMarkdown = () =>{}
+;
+
+
 
 // writing files
 const writeFile = () =>
-fs.writeFile('mynewfile3.txt', 'Hello content!', function (err) {
+fs.writeFile('court.txt', 'Hello content!', function (err) {
   if (err) throw err;
   console.log('Saved!');
-});
+})
 
-module.exports = {writeFile};
+module.exports = {writeFile, generateMarkdown};

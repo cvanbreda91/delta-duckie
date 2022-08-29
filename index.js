@@ -1,25 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-var title = "";
-var description = "";
-var installation = "";
-var useage = "";
-var contribution = "";
-var test = "";
-var license = "";
-var username = "";
-var email = "";
-
-const writeFile = () =>
-fs.writeFile(title+'.txt', 'Hello content!', function (err) {
-  if (err) throw err;
-  console.log('Saved!');
-})
-
+// const writeFile = require ('./utils/generateMarkdown')
 
 // TODO: Create a function to initialize app
-const questions = () => {
+const questions = (data) => {
     // TODO: Create an array of questions for user input
     return inquirer.prompt([
       {
@@ -108,18 +93,34 @@ const questions = () => {
           }
         }
       },
-    ]).then(answers => {
-      title = answers.title;
-      description = answers.description;
-      installation= answers.installation;
-      useage = answers.useage;
-      contribution = answers.contribution;
-      test = answers.test;
-      license = answers.license;
-      username = answers.username;
-      email = answers.email;
-    });
+    ]).then(({
+      title,
+      description,
+      installation,
+      useage,
+      contribution,
+      test,
+      license,
+      username,
+      email
+    })=>{
+    //template
+    const template = `# ${title}
+    *[Description]${description}
+    *[Installation]${installation}
+    *[Useage]${useage}
+    *[Contribution]${contribution}
+    `;
+    writeFile(title,template)
+    
+    })
 }
+const writeFile = (fileName,data) =>
+fs.writeFile(`./${fileName.toUpperCase().split(' ').join('')}.md`, data, function (err) {
+  if (err) throw err;
+  console.log('Saved!');
+})
 
 questions()
-.then (writeFile);
+
+
