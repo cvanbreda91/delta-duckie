@@ -1,5 +1,21 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs');
+var title = "";
+var description = "";
+var installation = "";
+var useage = "";
+var contribution = "";
+var test = "";
+var license = "";
+var username = "";
+var email = "";
+
+const writeFile = () =>
+fs.writeFile(title+'.txt', 'Hello content!', function (err) {
+  if (err) throw err;
+  console.log('Saved!');
+})
 
 
 // TODO: Create a function to initialize app
@@ -8,10 +24,10 @@ const questions = () => {
     return inquirer.prompt([
       {
         type: 'input',
-        name: 'projectTitle',
+        name: 'title',
         message: 'What is your project name? (Required)',
-        validate: nameInput => {
-          if (nameInput) {
+        validate: titleInput => {
+          if (titleInput) {
             return true;
           } else {
             console.log('Please enter your project name!');
@@ -92,19 +108,18 @@ const questions = () => {
           }
         }
       },
-    ])
+    ]).then(answers => {
+      title = answers.title;
+      description = answers.description;
+      installation= answers.installation;
+      useage = answers.useage;
+      contribution = answers.contribution;
+      test = answers.test;
+      license = answers.license;
+      username = answers.username;
+      email = answers.email;
+    });
 }
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    const generateMarkdown = require('./utils/generateMarkdown');
-    generateMarkdown;
-
-}
-
-// Function call to initialize app
 questions()
-.then(writeToFile)
-.catch(err => {
-  console.log(err);
-});;
+.then (writeFile);
