@@ -38,65 +38,7 @@ const replace = require('replace-in-file');
     }
   }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license == "Apache Licence 2.0") { 
-    var options = {
-      files: './README.md',
-      from: /LICENSE-LINK/g,
-      to: `https://www.apache.org/licenses/LICENSE-2.0.txt`,
-    };
-  replace(options)
-  .catch(error => {
-    console.error('Error occurred:', error);
-  });}
-  else if (license == "GNU GPLv2") { 
-    var options = {
-      files: './README.md',
-      from: /LICENSE-LINK/g,
-      to: `https://opensource.org/licenses/gpl-2.0.php`,
-    };
-  replace(options)
-  .catch(error => {
-    console.error('Error occurred:', error);
-  });}
-  else if (license == "GNU GPLv3") { 
-    var options = {
-      files: './README.md',
-      from: /LICENSE-LINK/g,
-      to: `https://www.gnu.org/licenses/gpl-3.0.en.html`,
-    };
-  replace(options)
-  .catch(error => {
-    console.error('Error occurred:', error);
-  });}
-  else if (license == "MIT") { 
-    var options = {
-      files: './README.md',
-      from: /LICENSE-LINK/g,
-      to: `https://opensource.org/licenses/MIT`,
-    };
-  replace(options)
-  .catch(error => {
-    console.error('Error occurred:', error);
-  });}
-  else if (license == "ISC") { 
-    var options = {
-      files: './README.md',
-      from: /LICENSE-LINK/g,
-      to: `https://opensource.org/licenses/ISC`,
-    };
-  replace(options)
-  .catch(error => {
-    console.error('Error occurred:', error);
-  });}
-  else {
-    return ``
-  }}
-
-
-// TODO: Create a function that returns the license section of README
+// Create a function that returns the license section AND license link of README
 // If there is no license, return an empty string
 function renderLicenseSection(license, username) {
   if (license == "Apache Licence 2.0") { 
@@ -115,7 +57,9 @@ function renderLicenseSection(license, username) {
       distributed under the License is distributed on an "AS IS" BASIS,
       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
       See the License for the specific language governing permissions and
-      limitations under the License.`,
+      limitations under the License.
+      
+      For more information please visit: https://www.apache.org/licenses/LICENSE-2.0.txt`,
     };
   replace(options)
   .catch(error => {
@@ -131,7 +75,9 @@ function renderLicenseSection(license, username) {
       
       This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
       
-      You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA`,
+      You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+      
+      For more information please visit: https://opensource.org/licenses/gpl-2.0.php`,
     };
   replace(options)
   .catch(error => {
@@ -154,7 +100,9 @@ function renderLicenseSection(license, username) {
       GNU General Public License for more details.
   
       You should have received a copy of the GNU General Public License
-      along with this program.  If not, see <https://www.gnu.org/licenses/>.`,
+      along with this program.  If not, see <https://www.gnu.org/licenses/>.
+      
+      For more information please visit: https://www.gnu.org/licenses/gpl-3.0.en.html`,
     };
   replace(options)
   .catch(error => {
@@ -170,7 +118,9 @@ function renderLicenseSection(license, username) {
       
       The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
       
-      THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`,
+      THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+      
+      For more information please visit: https://opensource.org/licenses/MIT`,
     };
   replace(options)
   .catch(error => {
@@ -192,7 +142,9 @@ function renderLicenseSection(license, username) {
       ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
       WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
       ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-      OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.`,
+      OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+      
+      For more information please visit: https://opensource.org/licenses/ISC`,
     };
   replace(options)
   .catch(error => {
@@ -212,4 +164,4 @@ fs.writeFile(`./README.md`, data, function (err) {
 })
 
 
-module.exports = {generateMarkdown,renderLicenseBadge,renderLicenseLink,renderLicenseSection};
+module.exports = {generateMarkdown,renderLicenseBadge,renderLicenseSection};

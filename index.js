@@ -139,8 +139,6 @@ ${contribution}
 ## License 
 ${license}
 
-LICENSE-LINK
-
 ## Test
 ${test}
 
@@ -156,7 +154,6 @@ ${email}
     writeFile.generateMarkdown(template);
     writeFile.renderLicenseBadge(template, license);
     writeFile.renderLicenseSection(license, username);
-    writeFile.renderLicenseLink(license)
     
 })}
 
