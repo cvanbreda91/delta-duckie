@@ -48,4 +48,4 @@ Please email me with questions!
 cvanbreda91@gmail.com
 
 ## Screenshot
-![website-image](https://github.com/cvanbreda91/delta-duckie/blob/main/images/website.png?raw=true)
+![website-image](https://github.com/cvanbreda91/delta-duckie/blob/main/images/readme.png?raw=true)
