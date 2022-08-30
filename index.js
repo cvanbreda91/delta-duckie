@@ -107,30 +107,34 @@ const questions = (data) => {
     })=>{
 
     //template
-    const template = `# ${title}
-    *[Description]${description}
-    *[Installation]${installation}
-    *[Useage]${useage}
-    *[Contribution]${contribution}
-    *[license] (${license})
-    `;
-    writeFile.generateMarkdown(title,template);
-    renderLicenseBadge(title, license);
+    const template = 
+`
+# ${title}
+## Description
+${description}
+## Installation
+${installation}
+## Useage
+${useage}
+## Contribution 
+${contribution}
+## License 
+${license}
+## Test
+${test}
+## username
+${username}
+## email 
+${email}
+`;
+    writeFile.generateMarkdown(template);
+    writeFile.renderLicenseBadge(template, license);
     
 })}
 
 questions()
 
-function renderLicenseBadge(fileName, license) {
-  if (license == "Apache Licence 2.0") {
-    fs.appendFile(`./${fileName.toUpperCase().split(' ').join('')}.md`, '![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/Apache.png?raw=true)', err => {
-      if (err) throw err;
-    })
-  }
-  else {
-    console.log ('not cool')
-  }
-}
+
 
 
 
