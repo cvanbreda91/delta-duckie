@@ -143,12 +143,13 @@ ${license}
 ${test}
 
 ## Questions?
-${username}
-https://github.com/${username}
-Please email me with questions!
-${email}
+* Github: ${username}
+* https://github.com/${username}
 
-## Sceenshot
+* Please email me with questions!
+* ${email}
+
+## Screenshot
 ![website-image](https://github.com/${username}/${title}/blob/main/images/${image}?raw=true)
 `;
     writeFile.generateMarkdown(template);

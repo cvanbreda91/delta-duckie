@@ -1,10 +1,6 @@
 
 const fs = require('fs');
 const replace = require('replace-in-file');
-var mitLink = 'https://opensource.org/licenses/MIT'
-
-
-
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
@@ -25,12 +21,12 @@ var mitLink = 'https://opensource.org/licenses/MIT'
       })
     }
     else if (license == "MIT") {
-      fs.writeFile(`./README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/MIT-badge.png?raw=true)${template}`, err => {
+      fs.writeFile(`./README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/M-I-T-badge.png?raw=true)${template}`, err => {
         if (err) throw err;
       })
     }
     else if (license == "ISC") {
-      fs.writeFile(`./README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/ISC-badge.png?raw=true)${template}`, err => {
+      fs.writeFile(`./README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/I-S-C-badge.png?raw=true)${template}`, err => {
         if (err) throw err;
       })
     }
@@ -39,7 +35,7 @@ var mitLink = 'https://opensource.org/licenses/MIT'
     }
   }
 
-// Create a function that returns the license section AND license link of README
+// Create a function that returns the license section
 // If there is no license, return an empty string
 function renderLicenseSection(license, username) {
   if (license == "Apache Licence 2.0") { 
@@ -121,7 +117,7 @@ function renderLicenseSection(license, username) {
       
       THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       
-      For more information please visit: ${mitLink}`,
+      For more information please visit:`,
     };
   replace(options)
   .catch(error => {
@@ -156,6 +152,10 @@ function renderLicenseSection(license, username) {
   }
 
 }
+// Create a function that returns the license section AND license link of README
+// If there is no license, return an empty string
+
+function renderLicenseLink (license, username){}
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (data) =>
@@ -165,4 +165,4 @@ fs.writeFile(`./README.md`, data, function (err) {
 })
 
 
-module.exports = {generateMarkdown,renderLicenseBadge,renderLicenseSection};
+module.exports = {generateMarkdown,renderLicenseBadge,renderLicenseLink,renderLicenseSection};
