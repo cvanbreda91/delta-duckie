@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/cvanbreda91/delta-duckie/issues"
   },
-  "homepage": "https://github.com/cvanbreda91/delta-duckie#readme"
+  "homepage": "https://github.com/cvanbreda91/delta-duckie#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "replace-in-file": "^6.3.5"
+  }
 }

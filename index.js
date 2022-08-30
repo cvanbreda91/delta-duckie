@@ -1,5 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+
 const fs = require('fs');
 const writeFile = require ('./utils/generateMarkdown');
 
@@ -93,6 +94,11 @@ const questions = (data) => {
           }
         }
       },
+      {
+        type: 'input',
+        name: 'image',
+        message: 'What is the image name and extenstion for your screenshot?',
+      },
     ]).then(({
       title,
       description,
@@ -103,7 +109,7 @@ const questions = (data) => {
       license,
       username,
       email,
-      
+      image,
     })=>{
 
     //template
@@ -112,23 +118,40 @@ const questions = (data) => {
 # ${title}
 ## Description
 ${description}
+
+## Table of Contents
+* [Installation](#installation)
+* [Useage](#useage)
+* [How to Contribute](#How to Contribute)
+* [License](#License)
+* [Test](#Test)
+* [Questions](#Questions)
+
 ## Installation
 ${installation}
+
 ## Useage
 ${useage}
-## Contribution 
+
+## How to Contribute
 ${contribution}
+
 ## License 
 ${license}
+
 ## Test
 ${test}
-## username
+
+## Questions?
 ${username}
-## email 
 ${email}
+
+## Sceenshot
+![website-image](https://github.com/${username}/${title}/blob/main/assets/images/${image})
 `;
     writeFile.generateMarkdown(template);
     writeFile.renderLicenseBadge(template, license);
+    writeFile.renderLicenseSection(username);
     
 })}
 
