@@ -48,5 +48,10 @@ https://github.com/dddddd
 Please email me with questions!
 ddddddd
 
+<<<<<<< HEAD
 ## Sceenshot
 ![website-image](https://github.com/dddddd/dddddd/blob/main/images/ddddddd?raw=true)
+=======
+## Screenshot
+![website-image](https://github.com/cvanbreda91/delta-duckie/blob/main/images/readme.png?raw=true)
+>>>>>>> 3d0d752aef862bc1af055a6c2ce1078f623f5f04
