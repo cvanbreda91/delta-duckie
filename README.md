@@ -1,4 +1,4 @@
-![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/Copyright © 2022 dddddd
+![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/Copyright © 2022 cvanbreda91
 
       Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
       
@@ -7,9 +7,9 @@
       THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       
       For more information please visit: https://opensource.org/licenses/MIT-badge.png?raw=true)
-# dddddd
+# delta-duckie
 ## Description
-ddddddd
+readme generator
 
 ## Table of Contents
 * [Installation](#installation)
@@ -20,16 +20,16 @@ ddddddd
 * [Questions](#Questions)
 
 ## Installation
-dddddddd
+npm
 
 ## Useage
-ddddddd
+free
 
 ## How to Contribute
-dddddd
+email me
 
 ## License 
-Copyright © 2022 dddddd
+Copyright © 2022 cvanbreda91
 
       Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
       
@@ -40,18 +40,13 @@ Copyright © 2022 dddddd
       For more information please visit: https://opensource.org/licenses/MIT
 
 ## Test
-ddddddddd
+none
 
 ## Questions?
-dddddd
-https://github.com/dddddd
+cvanbreda91
+https://github.com/cvanbreda91
 Please email me with questions!
-ddddddd
+cvanbreda91@gmail.com
 
-<<<<<<< HEAD
 ## Sceenshot
-![website-image](https://github.com/dddddd/dddddd/blob/main/images/ddddddd?raw=true)
-=======
-## Screenshot
 ![website-image](https://github.com/cvanbreda91/delta-duckie/blob/main/images/readme.png?raw=true)
->>>>>>> 3d0d752aef862bc1af055a6c2ce1078f623f5f04
