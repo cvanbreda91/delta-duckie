@@ -41,7 +41,7 @@ const questions = (data) => {
       },
       {
         type: 'input',
-        name: 'usage',
+        name: 'useage',
         message: 'Please enter useage information (Not Required)',
       },
       {
@@ -122,7 +122,7 @@ ${description}
 ## Table of Contents
 * [Installation](#installation)
 * [Useage](#useage)
-* [How to Contribute](#How to Contribute)
+* [How to Contribute](#How-to-Contribute)
 * [License](#License)
 * [Test](#Test)
 * [Questions](#Questions)
@@ -139,11 +139,15 @@ ${contribution}
 ## License 
 ${license}
 
+LICENSE-LINK
+
 ## Test
 ${test}
 
 ## Questions?
 ${username}
+https://github.com/${username}
+Please email me with questions!
 ${email}
 
 ## Sceenshot
@@ -151,7 +155,8 @@ ${email}
 `;
     writeFile.generateMarkdown(template);
     writeFile.renderLicenseBadge(template, license);
-    writeFile.renderLicenseSection(username);
+    writeFile.renderLicenseSection(license, username);
+    writeFile.renderLicenseLink(license)
     
 })}
 
