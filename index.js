@@ -149,7 +149,7 @@ Please email me with questions!
 ${email}
 
 ## Sceenshot
-![website-image](https://github.com/${username}/${title}/blob/main/assets/images/${image})
+![website-image](https://github.com/${username}/${title}/blob/main/images/${image}?raw=true)
 `;
     writeFile.generateMarkdown(template);
     writeFile.renderLicenseBadge(template, license);
