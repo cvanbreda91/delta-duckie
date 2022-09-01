@@ -5,12 +5,16 @@ A professional README.md generator made with node.js.
 
 ## Table of Contents
 * [Installation](#installation)
-* [Useage](#useage)
-* [Screenshot](#screenshot)
 * [Features](#features)
+* [Contribution](#contribution)
+* [Questions](#questions)
+* [Screenshot](#screenshot)
 
 ## Installation
 Please download inquirer and replace-in-file modules from npm.
+
+## Contribution
+Made with ❤️ by Courtney
 
 ## Features
 * Node.js
