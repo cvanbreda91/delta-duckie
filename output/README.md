@@ -2,7 +2,7 @@
 # delta-duckie
 
 ## Description
-a professional readme.md generator made with node.js
+A professional README.md generator using node.js
 
 ## Table of Contents
 * [Installation](#installation)
@@ -11,15 +11,16 @@ a professional readme.md generator made with node.js
 * [License](#License)
 * [Test](#Test)
 * [Questions](#Questions)
+* [Screenshot](#Screenshot)
 
 ## Installation
-please download inquirer and replace-in-file modules from npm
+Install the inquirer and replace-in-file packages from npm
 
 ## Useage
-for free use only
+For free useage only
 
 ## How to Contribute
-
+Email me for contribution
 
 ## License 
  Copyright (C) 2022  cvanbreda91
@@ -40,7 +41,7 @@ for free use only
 Please see following link for more information: [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 ## Test
-
+none
 
 ## Questions?
 * Github: cvanbreda91
