@@ -58,9 +58,9 @@ function renderLicenseSection (license, username){
       distributed under the License is distributed on an "AS IS" BASIS,
       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
       See the License for the specific language governing permissions and
-      limitations under the License.
+      limitations under the License.`+`
       
-      Please see following link for more information: [Apache License](https://www.apache.org/licenses/LICENSE-2.0.txt)`,
+Please see following link for more information: [Apache License](https://www.apache.org/licenses/LICENSE-2.0.txt)`,
     };
   replace(options)
   .catch(error => {
@@ -76,9 +76,9 @@ function renderLicenseSection (license, username){
       
       This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
       
-      You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+      You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA`+`
       
-      Please see following link for more information: [GNU GPLv2](https://opensource.org/licenses/gpl-2.0.php)`,
+Please see following link for more information: [GNU GPLv2](https://opensource.org/licenses/gpl-2.0.php)`,
     };
   replace(options)
   .catch(error => {
@@ -101,9 +101,9 @@ function renderLicenseSection (license, username){
       GNU General Public License for more details.
   
       You should have received a copy of the GNU General Public License
-      along with this program.  If not, see <https://www.gnu.org/licenses/>.
+      along with this program.  If not, see <https://www.gnu.org/licenses/>.`+`
       
-      Please see following link for more information: [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)`,
+Please see following link for more information: [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)`,
     };
   replace(options)
   .catch(error => {
@@ -119,9 +119,9 @@ function renderLicenseSection (license, username){
       
       The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
       
-      THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-      
-      Please see following link for more information: [MIT](https://mit-license.org/)`,
+      THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`+`
+
+Please see following link for more information: [MIT](https://mit-license.org/)`,
     };
   replace(options)
   .catch(error => {
