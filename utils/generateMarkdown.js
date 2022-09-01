@@ -6,27 +6,27 @@ const replace = require('replace-in-file');
 // If there is no license, return an empty string
   function renderLicenseBadge(template, license) {
     if (license == "Apache Licence 2.0") {
-      fs.writeFile(`./README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/Apache.png?raw=true)${template}`, err => {
+      fs.writeFile(`./output/README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/Apache.png?raw=true)${template}`, err => {
         if (err) throw err
       })
     }
     else if (license == "GNU GPLv2") {
-      fs.writeFile(`./README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/GPLv2.png?raw=true)${template}`, err => {
+      fs.writeFile(`./output/README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/GPLv2.png?raw=true)${template}`, err => {
         if (err) throw err;
       })
     }
     else if (license == "GNU GPLv3") {
-      fs.writeFile(`./README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/GPLv3.png?raw=true)${template}`, err => {
+      fs.writeFile(`./output/README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/GPLv3.png?raw=true)${template}`, err => {
         if (err) throw err;
       })
     }
     else if (license == "MIT") {
-      fs.writeFile(`./README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/M-I-T-badge.png?raw=true)${template}`, err => {
+      fs.writeFile(`./output/README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/M-I-T-badge.png?raw=true)${template}`, err => {
         if (err) throw err;
       })
     }
     else if (license == "ISC") {
-      fs.writeFile(`./README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/I-S-C-badge.png?raw=true)${template}`, err => {
+      fs.writeFile(`./output/README.md`, `![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/I-S-C-badge.png?raw=true)${template}`, err => {
         if (err) throw err;
       })
     }
@@ -37,11 +37,15 @@ const replace = require('replace-in-file');
 
 // Create a function that returns the license section
 // If there is no license, return an empty string
-function renderLicenseSection(license, username) {
-  if (license == "Apache Licence 2.0") { 
+
+// Create a function that returns the license section AND license link of README
+// If there is no license, return an empty string
+
+function renderLicenseSection (license, username){
+  if (license == "Apache License 2.0") { 
     var options = {
-      files: './README.md',
-      from: /Apache Licence 2.0/g,
+      files: './output/README.md',
+      from: /Apache License 2.0/g,
       to: `Copyright 2022 ${username}
 
       Licensed under the Apache License, Version 2.0 (the "License");
@@ -56,7 +60,7 @@ function renderLicenseSection(license, username) {
       See the License for the specific language governing permissions and
       limitations under the License.
       
-      For more information please visit: https://www.apache.org/licenses/LICENSE-2.0.txt`,
+      Please see following link for more information: [Apache License](https://www.apache.org/licenses/LICENSE-2.0.txt)`,
     };
   replace(options)
   .catch(error => {
@@ -64,7 +68,7 @@ function renderLicenseSection(license, username) {
   });}
   else if (license == "GNU GPLv2") { 
     var options = {
-      files: './README.md',
+      files: './output/README.md',
       from: /GNU GPLv2/g,
       to: `Copyright (C) 2022 ${username}
 
@@ -74,7 +78,7 @@ function renderLicenseSection(license, username) {
       
       You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
       
-      For more information please visit: https://opensource.org/licenses/gpl-2.0.php`,
+      Please see following link for more information: [GNU GPLv2](https://opensource.org/licenses/gpl-2.0.php)`,
     };
   replace(options)
   .catch(error => {
@@ -82,7 +86,7 @@ function renderLicenseSection(license, username) {
   });}
   else if (license == "GNU GPLv3") { 
     var options = {
-      files: './README.md',
+      files: './output/README.md',
       from: /GNU GPLv3/g,
       to: ` Copyright (C) 2022  ${username}
 
@@ -99,7 +103,7 @@ function renderLicenseSection(license, username) {
       You should have received a copy of the GNU General Public License
       along with this program.  If not, see <https://www.gnu.org/licenses/>.
       
-      For more information please visit: https://www.gnu.org/licenses/gpl-3.0.en.html`,
+      Please see following link for more information: [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)`,
     };
   replace(options)
   .catch(error => {
@@ -107,7 +111,7 @@ function renderLicenseSection(license, username) {
   });}
   else if (license == "MIT") { 
     var options = {
-      files: './README.md',
+      files: './output/README.md',
       from: /MIT/g,
       to: `Copyright © 2022 ${username}
 
@@ -117,7 +121,7 @@ function renderLicenseSection(license, username) {
       
       THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       
-      For more information please visit:`,
+      Please see following link for more information: [MIT](https://mit-license.org/)`,
     };
   replace(options)
   .catch(error => {
@@ -125,7 +129,7 @@ function renderLicenseSection(license, username) {
   });}
   else if (license == "ISC") { 
     var options = {
-      files: './README.md',
+      files: './output/README.md',
       from: /ISC/g,
       to: `Copyright (c) 2022 ${username}
 
@@ -141,7 +145,7 @@ function renderLicenseSection(license, username) {
       ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
       OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
       
-      For more information please visit: https://opensource.org/licenses/ISC`,
+      Please see following link for more information: [ISC](https://opensource.org/licenses/ISC)`,
     };
   replace(options)
   .catch(error => {
@@ -152,17 +156,13 @@ function renderLicenseSection(license, username) {
   }
 
 }
-// Create a function that returns the license section AND license link of README
-// If there is no license, return an empty string
-
-function renderLicenseLink (license, username){}
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (data) =>
-fs.writeFile(`./README.md`, data, function (err) {
+fs.writeFile(`./output/README.md`, data, function (err) {
   if (err) throw err;
   console.log('Saved!');
 })
 
 
-module.exports = {generateMarkdown,renderLicenseBadge,renderLicenseLink,renderLicenseSection};
+module.exports = {generateMarkdown,renderLicenseBadge,renderLicenseSection};

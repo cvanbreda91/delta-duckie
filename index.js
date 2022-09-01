@@ -4,6 +4,8 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const writeFile = require ('./utils/generateMarkdown');
 
+var licenseLink = '';
+
 // TODO: Create a function to initialize app
 const questions = (data) => {
     // TODO: Create an array of questions for user input
@@ -58,7 +60,7 @@ const questions = (data) => {
         type: 'checkbox',
         name: 'license',
         message: 'Please choose a licence for your application (Required)',
-        choices: ['Apache Licence 2.0', 'GNU GPLv2','GNU GPLv3', 'MIT', 'ISC'],
+        choices: ['Apache License 2.0', 'GNU GPLv2','GNU GPLv3', 'MIT', 'ISC'],
         validate: licenceCheckbox => {
             if (licenceCheckbox) {
               return true;
@@ -116,6 +118,7 @@ const questions = (data) => {
     const template = 
 `
 # ${title}
+
 ## Description
 ${description}
 
@@ -150,12 +153,11 @@ ${test}
 * ${email}
 
 ## Screenshot
-![website-image](https://github.com/${username}/${title}/blob/main/images/${image}?raw=true)
-`;
+![website-image](https://github.com/${username}/${title}/blob/main/images/${image}?raw=true)`;
+
     writeFile.generateMarkdown(template);
     writeFile.renderLicenseBadge(template, license);
-    writeFile.renderLicenseSection(license, username);
-    
+    writeFile.renderLicenseSection(license, username);    
 })}
 
 questions()
