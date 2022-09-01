@@ -1,8 +1,8 @@
 ![License](https://github.com/cvanbreda91/delta-duckie/blob/main/utils/badges/I-S-C-badge.png?raw=true)
-# delta-duckie
+# fff
 
 ## Description
-A professional README.md generator using node.js
+fff
 
 ## Table of Contents
 * [Installation](#installation)
@@ -13,16 +13,16 @@ A professional README.md generator using node.js
 * [Questions](#Questions)
 
 ## Installation
-Install the inquirer and replace-in-file modules from npm
+fff
 
 ## Useage
-for free use only
+ffff
 
 ## How to Contribute
-please email me
+fff
 
 ## License 
-Copyright (c) 2022 cvanbreda91
+Copyright (c) 2022 ffff
 
       Permission to use, copy, modify, and distribute this software for any
       purpose with or without fee is hereby granted, provided that the above
@@ -36,17 +36,17 @@ Copyright (c) 2022 cvanbreda91
       ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
       OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
       
-      Please see following link for more information: [ISC](https://opensource.org/licenses/ISC)
+Please see following link for more information: [ISC](https://opensource.org/licenses/ISC)
 
 ## Test
-none
+ffff
 
 ## Questions?
-* Github: cvanbreda91
-* https://github.com/cvanbreda91
+* Github: ffff
+* https://github.com/ffff
 
 * Please email me with questions!
-* cvanbreda91@gmail.com
+* ffff
 
 ## Screenshot
-![website-image](https://github.com/cvanbreda91/delta-duckie/blob/main/images/readme.png?raw=true)
+![website-image](https://github.com/ffff/fff/blob/main/images/ffff?raw=true)

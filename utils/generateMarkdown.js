@@ -143,9 +143,9 @@ function renderLicenseSection (license, username){
       ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
       WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
       ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-      OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+      OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.`+`
       
-      Please see following link for more information: [ISC](https://opensource.org/licenses/ISC)`,
+Please see following link for more information: [ISC](https://opensource.org/licenses/ISC)`,
     };
   replace(options)
   .catch(error => {
