@@ -1,8 +1,8 @@
-
+//Include packages needed for this application
 const fs = require('fs');
 const replace = require('replace-in-file');
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+//Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
   function renderLicenseBadge(template, license) {
     if (license == "Apache Licence 2.0") {
@@ -34,9 +34,6 @@ const replace = require('replace-in-file');
       return ``
     }
   }
-
-// Create a function that returns the license section
-// If there is no license, return an empty string
 
 // Create a function that returns the license section AND license link of README
 // If there is no license, return an empty string
@@ -157,12 +154,12 @@ Please see following link for more information: [ISC](https://opensource.org/lic
 
 }
 
-// TODO: Create a function to generate markdown for README
+//Create a function to generate markdown for README
 const generateMarkdown = (data) =>
 fs.writeFile(`./output/README.md`, data, function (err) {
   if (err) throw err;
   console.log('Saved!');
 })
 
-
+//Export functions
 module.exports = {generateMarkdown,renderLicenseBadge,renderLicenseSection};

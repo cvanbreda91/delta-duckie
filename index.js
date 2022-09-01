@@ -1,19 +1,17 @@
-// TODO: Include packages needed for this application
+//Include packages needed for this application
 const inquirer = require('inquirer');
-
 const fs = require('fs');
 const writeFile = require ('./utils/generateMarkdown');
 
-var licenseLink = '';
-
-// TODO: Create a function to initialize app
+//Create a function to initialize app
 const questions = (data) => {
-    // TODO: Create an array of questions for user input
+    //Create an array of questions for user input
     return inquirer.prompt([
       {
         type: 'input',
         name: 'title',
         message: 'What is your project name? (Required)',
+        //Validate required questions
         validate: titleInput => {
           if (titleInput) {
             return true;
@@ -102,6 +100,7 @@ const questions = (data) => {
         message: 'What is the image name and extenstion for your screenshot?',
       },
     ]).then(({
+      //define variables
       title,
       description,
       installation,
@@ -114,7 +113,7 @@ const questions = (data) => {
       image,
     })=>{
 
-    //template
+    //create template
     const template = 
 `
 # ${title}
@@ -129,6 +128,7 @@ ${description}
 * [License](#License)
 * [Test](#Test)
 * [Questions](#Questions)
+* [Screenshot](#Screenshot)
 
 ## Installation
 ${installation}
@@ -155,11 +155,13 @@ ${test}
 ## Screenshot
 ![website-image](https://github.com/${username}/${title}/blob/main/images/${image}?raw=true)`;
 
+    //Call functions from generateMarkdown.js
     writeFile.generateMarkdown(template);
     writeFile.renderLicenseBadge(template, license);
     writeFile.renderLicenseSection(license, username);    
 })}
 
+//call questions function
 questions()
 
 
